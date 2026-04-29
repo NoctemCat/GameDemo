@@ -39,4 +39,7 @@ public partial class Splash : Control, ISplash
       AppRepo.SkipSplashScreen();
     }
   }
+
+  DisplayServer.AccessibilityLiveMode IControl.AccessibilityLive { get; set; }
+  DisplayServer.AccessibilityLiveMode IControl.GetAccessibilityLive() => ((IControl)this).AccessibilityLive;
 }

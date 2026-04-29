@@ -9,6 +9,9 @@ var cumulated_triangle_areas : Array
 var rand : RandomNumberGenerator
 
 func _ready():
+	# This script causes problems in release multi-threaded export.
+	# All other variations worked correctly.
+	return
 	var mesh = target_mesh_node.mesh
 	mdt = MeshDataTool.new()
 	mdt.create_from_surface(mesh, 0)

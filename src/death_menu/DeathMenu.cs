@@ -67,4 +67,7 @@ public partial class DeathMenu : Control, IDeathMenu
 
   public void OnAnimationFinished(StringName animationName) =>
     EmitSignal(SignalName.TransitionCompleted);
+
+  DisplayServer.AccessibilityLiveMode IControl.AccessibilityLive { get; set; }
+  DisplayServer.AccessibilityLiveMode IControl.GetAccessibilityLive() => ((IControl)this).AccessibilityLive;
 }

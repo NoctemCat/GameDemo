@@ -1,4 +1,5 @@
 nupkg/
+.nuget/
 
 coverage/*
 !coverage/.gdignore
@@ -10,6 +11,7 @@ obj/
 .generated/
 .vs/
 .DS_Store
+export/
 
 *.translation
 *.old

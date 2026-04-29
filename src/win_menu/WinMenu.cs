@@ -49,4 +49,7 @@ public partial class WinMenu : Control, IWinMenu
     => EmitSignal(SignalName.TransitionCompleted);
 
   public void FadeOut() => AnimationPlayer.Play("fade_out");
+
+  DisplayServer.AccessibilityLiveMode IControl.AccessibilityLive { get; set; }
+  DisplayServer.AccessibilityLiveMode IControl.GetAccessibilityLive() => ((IControl)this).AccessibilityLive;
 }

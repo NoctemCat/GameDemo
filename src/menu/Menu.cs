@@ -44,4 +44,7 @@ public partial class Menu : Control, IMenu
 
   public void OnNewGamePressed() => EmitSignal(SignalName.NewGame);
   public void OnLoadGamePressed() => EmitSignal(SignalName.LoadGame);
+
+  DisplayServer.AccessibilityLiveMode IControl.AccessibilityLive { get; set; }
+  DisplayServer.AccessibilityLiveMode IControl.GetAccessibilityLive() => ((IControl)this).AccessibilityLive;
 }

@@ -64,4 +64,7 @@ public partial class InGameUI : Control, IInGameUI
     InGameUILogic.Stop();
     InGameUIBinding.Dispose();
   }
+
+  DisplayServer.AccessibilityLiveMode IControl.AccessibilityLive { get; set; }
+  DisplayServer.AccessibilityLiveMode IControl.GetAccessibilityLive() => ((IControl)this).AccessibilityLive;
 }

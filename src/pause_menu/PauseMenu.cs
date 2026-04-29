@@ -84,4 +84,7 @@ public partial class PauseMenu : Control, IPauseMenu
 
   private void Animate(string animation)
     => SaveOverlayAnimationPlayer.Play(animation);
+
+  DisplayServer.AccessibilityLiveMode IControl.AccessibilityLive { get; set; }
+  DisplayServer.AccessibilityLiveMode IControl.GetAccessibilityLive() => ((IControl)this).AccessibilityLive;
 }

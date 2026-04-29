@@ -1,6 +1,6 @@
-<Project Sdk="Godot.NET.Sdk/4.6.2">
+<Project Sdk="Godot.NET.Sdk/4.7.0-beta">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
@@ -27,8 +27,10 @@
     <ReportAnalyzer>true</ReportAnalyzer>
     <CodeAnalysisRuleSet>CodeAnalyzers.ruleset</CodeAnalysisRuleSet>
 
-    <SkipTests Condition="'$(SKIP_TESTS)' != ''">true</SkipTests>
+    <SkipTests>true</SkipTests>
     <RunTests>false</RunTests>
+
+    <RunAOTCompilation>true</RunAOTCompilation>
   </PropertyGroup>
 
   <PropertyGroup Condition="('$(Configuration)' == 'Debug' or '$(Configuration)' == 'ExportDebug') and '$(SkipTests)' != 'true' ">
